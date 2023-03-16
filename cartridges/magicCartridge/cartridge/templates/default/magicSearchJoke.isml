@@ -1,0 +1,29 @@
+<!--- TEMPLATENAME: magicSearch.isml --->
+<isdecorate template="common/layout/page">
+	<isscript>
+	    var assets = require('*/cartridge/scripts/assets.js');
+	    assets.addCss('/css/login.css');
+	    assets.addJs('/js/magic.js');
+    </isscript>
+    <div class="row justify-content-center equal-height">
+    	<div class="col-sm-8 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="login-form-nav">
+						<form action="${pdict.actionUrl}" method="POST" class="magic-form" <isprint value="${pdict.magicForm.attributes}" encoding="off" />>
+						    <div class="form-group required">
+						        <label class="form-control-label">
+						            <isprint value="${pdict.magicForm.jokesearch.label}" encoding="htmlcontent" />
+						        </label>
+						        <input type="input" class="form-control" id="magic-form-jokesearch" <isprint value="${pdict.magicForm.jokesearch.attributes}" encoding="off" />>
+						        <div class="invalid-feedback"></div>
+						    </div>
+						    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+	   						<button type="submit" class="btn btn-block btn-primary">${Resource.msg('button.magic.search', 'magic', null)}</button>
+						</form>    
+	            	</div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</isdecorate>

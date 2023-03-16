@@ -1,0 +1,8 @@
+    <iscontent type="text/html" charset="UTF-8" compact="true" />
+    <html>
+        <body>
+            <h1>Hello from CustomForm</h1>
+            <h3>Data from submitted from</h3>
+            <p>Hi, ${pdict.lastname}, ${pdict.firstname}. <br/> Check your email if it is correct. Is it ${pdict.email}.<br/> Comment you made is : ${pdict.comment}</p>
+        </body>
+    </html>

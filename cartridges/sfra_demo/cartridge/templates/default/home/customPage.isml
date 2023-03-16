@@ -1,0 +1,33 @@
+ <isdecorate template="common/layout/page">
+ <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/csrf.css');
+    </isscript>
+        <form action="${pdict.actionUrl}" class="custom" method="POST">
+
+            <h1>Custom forms page</h1>
+
+            <div class="form-group required" required>
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" id="firstname" />
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group required">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname" required/>
+            </div>
+
+            <div class="form-group required">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+            </div>
+
+            <div class="form-group required">
+                <label for="comment">Comment</label>
+                <div><textarea rows="3" cols="38" name="comment" id="comment" type="comment" ></textarea></div>
+            </div>
+
+            <div><button type="submit" class="btn btn-primary">${Resource.msg('button.text.submit', 'login', null)}</button></div>
+        </form>
+    </isdecorate>

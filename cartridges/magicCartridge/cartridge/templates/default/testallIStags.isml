@@ -1,0 +1,19 @@
+<isdecorate template="common/layout/page">
+
+
+<!-- isset
+  name  = var_name                   \\required
+  value = var_value                  \\required
+  scope = "session"|"request"|"page" \\required
+/ -->
+
+<!--isslot
+  id             = id                                 \\required
+  context        = "global" | "category" | "folder"   \\required
+  context-object = context-object                     \\required for category or folder context
+  description    = description                        \\required
+  preview-url    = url                                \\optional for category or folder context
+-->
+
+
+</isdecorate>

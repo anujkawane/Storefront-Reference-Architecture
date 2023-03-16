@@ -1,0 +1,38 @@
+<!--- TEMPLATENAME: magicSearch.isml --->
+<isdecorate template="common/layout/page">
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>USA Population Data!</title>
+</head>
+<body>
+    <div class="header">
+        <h1> USA Population Data</h1>
+    </div>
+    <hr/>
+    <div class="content">
+       <table border="3"> 
+        <tr>
+        <td> <b>ID Nation </b></td>
+        <td><b> ID Year</b></td>
+        <td><b> Nation</b></td>
+        <td><b> Population</b></td>
+            <td><b> Slug Nation</b></td>
+            <td> <b>Year</b></td>
+     
+	    <isloop items="${pdict.usaPopulationData}" var="usaPopulationDataObject">
+	    <tr>
+            <td> ${usaPopulationDataObject["ID Nation"]}</td>
+            <td> ${usaPopulationDataObject["ID Year"]}</td>
+            <td> ${usaPopulationDataObject.Nation}</td>
+            <td> ${usaPopulationDataObject.Population}</td>
+            <td> ${usaPopulationDataObject["Slug Nation"]}</td>
+            <td> ${usaPopulationDataObject.Year}</td>
+         </tr>
+	    </isloop>
+	</table>
+    </div>
+    Back to <a href="${pdict.continueUrl}">Dad Joke Search</a>
+</body>
+</isdecorate>
